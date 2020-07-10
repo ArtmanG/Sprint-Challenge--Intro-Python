@@ -14,12 +14,21 @@
 #
 # Note that the first line of the CSV is header that describes the fields--this
 # should not be loaded into a City object.
+import csv
+with open('cities.csv', newline='') as csvfile:
+    spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+    for row in spamreader:
+      print(', '.join(row))
+
+      
 cities = []
 
 def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # For each city record, create a new City instance and add it to the 
   # `cities` list
+
+
     
     return cities
 
